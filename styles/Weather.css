@@ -1,0 +1,156 @@
+.weather-card {
+    color: #faf2ed;
+    padding: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  
+  .weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .weather-card h2 {
+    margin-top: .1rem;
+    font-weight: 500;
+    font-size: 3rem;
+    margin-bottom: 0.7rem;
+  }
+  
+  
+  .temperature.main-temperature {
+    font-size: 5rem;
+    font-weight: 100;
+  }
+  
+  .other-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .other-info>div {
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    align-items: center;
+    justify-content: space-between;
+    width: 17rem;
+    padding: 0.2rem;
+    border: solid .05rem white;
+    border-radius: .7rem;
+  }
+  
+  .other-info>div svg {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 10px;
+  }
+  
+  .other-info>div span {
+    flex-grow: 1;
+  }
+  
+  
+  .feels-like {
+    font-size: 1.3rem;
+  }
+  
+  .condition {
+    margin: 1rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 1.9rem;
+    font-weight: 300;
+  }
+  
+  .condition svg {
+    margin-right: 1rem;
+  }
+  
+  
+  .weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .weather-details {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    justify-content: space-around;
+    font-size: 1.6rem;
+    font-weight: 200;
+  }
+  
+  .weather-details svg {
+    margin-right: 1rem;
+  }
+  
+  
+  .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+    border: solid .1rem black;
+    border-radius: 1.5rem;
+    transition: border-color 1.3s ease, color 1.3s ease;
+  }
+  
+  .search-box svg {
+    color: black;
+    position: absolute;
+    left: 10px;
+    transition: color 1.3s ease;
+  }
+  
+  .search-box input {
+    color: black;
+    background: none;
+    box-sizing: border-box;
+    border: none;
+    height: 3rem;
+    padding-left: 2rem;
+    border-radius: 1.5rem 0 0 1.5rem;
+    width: 100%;
+    font-size: 1.3rem;
+    outline: none;
+    transition: color 1.3s ease;
+  }
+  
+  .searchBtn {
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 20px;
+    box-sizing: border-box;
+    width: 30%;
+    height: 3rem;
+    border-radius: 0 1.5rem 1.5rem 0;
+    outline: none;
+    transition: color 1.3s ease;
+  }
+  
+  .app-container.dark .search-box {
+    border-color: white;
+  }
+  
+  .app-container.dark .search-box svg {
+    color: white;
+  }
+  
+  .app-container.dark .search-box input {
+    color: white;
+  }
+  
+  .app-container.dark .searchBtn {
+    color: white;
+  }

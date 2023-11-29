@@ -1,6 +1,7 @@
-import React from "react";
-import HourlyWeatherCard from "./HourlyWeatherCard"; 
-import "../styles/WeatherHourlyForecast.css";
+// components/WeatherHourlyForecast.js
+import React from 'react';
+import HourlyWeatherCard from './HourlyWeatherCard';
+import '../styles/WeatherHourlyForecast.css';
 
 const WeatherHourlyForecast = ({ hourlyForecastData }) => {
   if (!hourlyForecastData || !hourlyForecastData.list) {
@@ -16,14 +17,13 @@ const WeatherHourlyForecast = ({ hourlyForecastData }) => {
       </div>
       <div className="hourly-forecast-cards">
         {hourlyForecastList.map((forecast) => (
-          <div className="hourly-time" key={forecast.dt} >
+          <div className="hourly-time" key={forecast.dt}>
             <HourlyWeatherCard weatherData={forecast} showTime />
           </div>
         ))}
       </div>
     </div>
   );
-
 };
 
 export default WeatherHourlyForecast;

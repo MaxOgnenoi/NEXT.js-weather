@@ -1,5 +1,6 @@
-import React from "react";
-import moment from "moment";
+// components/WeatherCard.js
+import React from 'react';
+import moment from 'moment';
 import {
   WiDaySunny,
   WiRain,
@@ -14,18 +15,18 @@ import {
   WiStrongWind,
   WiSunrise,
   WiSunset,
-} from "react-icons/wi";
-import "../styles/Weather.css";
+} from 'react-icons/wi';
+import '../styles/Weather.css';
 
 const getWeatherIcon = (weatherDescription, sunrise, sunset, currentTime) => {
   const isDaytime = currentTime > sunrise && currentTime < sunset;
 
   switch (weatherDescription) {
-    case "Clear":
+    case 'Clear':
       return isDaytime ? <WiDaySunny size={64} /> : <WiNightClear size={64} />;
-    case "Rain":
+    case 'Rain':
       return isDaytime ? <WiRain size={64} /> : <WiNightRain size={64} />;
-    case "Clouds":
+    case 'Clouds':
       return isDaytime ? <WiCloudy size={64} /> : <WiNightCloudy size={64} />;
     default:
       return isDaytime ? <WiDayCloudy size={64} /> : <WiNightCloudy size={64} />;
@@ -40,12 +41,8 @@ const WeatherCard = ({ weatherData }) => {
     <div className="weather-card">
       <h2>{name}</h2>
       <div className="weather-container">
-        <div className="temperature main-temperature">
-          {Math.round(main.temp)}°C
-        </div>
-        <div className="feels-like">
-          Feels like: {Math.round(main.feels_like)}°C
-        </div>
+        <div className="temperature main-temperature">{Math.round(main.temp)}°C</div>
+        <div className="feels-like">Feels like: {Math.round(main.feels_like)}°C</div>
         <div className="condition">
           {getWeatherIcon(weather[0].main, sys.sunrise, sys.sunset, currentTime)}
           {weather[0].description}
@@ -71,10 +68,10 @@ const WeatherCard = ({ weatherData }) => {
       </div>
       <div className="weather-details">
         <div>
-          <WiSunrise />Sunrise: {moment.unix(sys.sunrise).format("HH:mm")}
+          <WiSunrise />Sunrise: {moment.unix(sys.sunrise).format('HH:mm')}
         </div>
         <div>
-          <WiSunset />Sunset: {moment.unix(sys.sunset).format("HH:mm")}
+          <WiSunset />Sunset: {moment.unix(sys.sunset).format('HH:mm')}
         </div>
       </div>
     </div>

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-import { FiSearch } from "react-icons/fi";
-import "../styles/Weather.css";
+// components/SearchBox.js
+import React, { useState } from 'react';
+import { FiSearch } from 'react-icons/fi';
+import '../styles/Weather.css';
 
 function SearchBox({ setCity }) {
-  const [city, setCityValue] = useState("");
+  const [city, setCityValue] = useState('');
 
   const handleCityChange = (event) => {
     setCityValue(event.target.value);
@@ -24,7 +25,9 @@ function SearchBox({ setCity }) {
         onChange={handleCityChange}
         placeholder="Search for a city..."
       />
-      <button className="searchBtn" type="submit">Search</button>
+      <button className="searchBtn" type="submit">
+        Search
+      </button>
     </form>
   );
 }

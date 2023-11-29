@@ -1,0 +1,52 @@
+.forecast-header h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 1rem 0 0 0;
+  }
+  
+  .hourly-forecast-cards {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .hourly-time {
+    flex: 1;
+  }
+  
+  .temperature.hourly-temperature {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
+  
+  .time-info {
+    font-size: 1rem;
+  }
+  
+  .weather-clouds {
+    margin: 0;
+  }
+  
+  .clouds {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  
+  .hourly-forecast-cards .weather-info {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+  
+  .weather-card {
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 200;
+  }
+  
+  .icon svg {
+    width: 2rem;
+    height: 2rem;
+  }
+  
+  .weather-info {
+    margin: 0;
+  }
